@@ -209,6 +209,8 @@ del "%output%.dat"
 :E
 ```
 
+The last few commands for `temp.bat` only includes the concatenation of `.whd` and `.dat` files, which are the wave file header data and the wave file data block correspondingly. The origins of this behavior (why `.whd` and `.dat` files are made) is yet to be investigated.
+
 ## Multithreaded rendering
  `temp.bat` and `tempn.bat` are created for this mode of rendering. This mode of rendering can only be accessed by shareware UTAU by enabling it in `Tools -> Option -> Rendering -> Multiple processes for rendering (use batch files)`
 
