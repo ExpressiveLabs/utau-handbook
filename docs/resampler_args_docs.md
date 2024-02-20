@@ -17,7 +17,7 @@
         - [temp.bat: multithreaded](#tempbat-multithreaded)
 
 # Resampler Arguments
- The resampler receives instructions on how to resample the note through terminal arguments. These commands are setup in [batch files that UTAU generates.](#batch-files) but for now we will be focusing on what the resampler sees, which is only the terminal arguments by default.
+ The resampler receives instructions on how to resample the note through terminal arguments. These commands are setup in [batch files that UTAU generates](#batch-files) but for now we will be focusing on what the resampler sees, which is only the terminal arguments by default.
  
  Some resamplers override this method for faster rendering or doing other things. A few examples of this is moresampler (presumably for faster concatenation), and presamp (to get new calculations for automatic VCV/CVVC)
 
@@ -60,7 +60,7 @@ resampler.exe infile.wav outfile.wav 120 100 GB60
  | *tempo* | The tempo of the note to help with pitchbend calculation. Always has a ! at the start. | !120 |
  | *pitchbend* | The pitchbend of the note. [More about it here.](#the-pitchbend-argument) | [Provided here.](#the-pitchbend-argument) |
 
-**Tip:** It might be easy to to the consonant velocity calculations as a percentage, but consonant velocity 0 would mean the length of the consonant is 0 in this system. The actual calculation for consonant velocity to turn it into a multiplier is $2^{1-\frac{v}{100}}$
+**Tip:** It might be easy to do the consonant velocity calculations as a percentage, but consonant velocity 0 would mean the length of the consonant is 0 in this system. The actual calculation for consonant velocity to turn it into a multiplier is $2^{1-\frac{v}{100}}$ with $v$ being the velocity.
  
 # The Pitchbend Argument
  The pitchbend argument is in a special format that reduces its space in the terminal arguments as Windows command prompt limits the amount of characters in a command to 8191 characters. This section is for explaining this format.
@@ -68,7 +68,7 @@ resampler.exe infile.wav outfile.wav 120 100 GB60
 ## The actual explanation
  The pitchbend argument is in Base64, where every two characters is considered to be a signed 12-bit integer. It also includes a form of run length encoding to make strings of the same pitch offset shorter.
 
- The run length encoding comes as a regular number surrounded by the `#` character. The number inside is the amount of repeats that the value last saved in the array.
+ The run length encoding comes as a regular number surrounded by the `#` character. The number inside is the amount of repeats of the value last saved in the array.
  
  The array of integers that you get in return is an offset from the center pitch in cents. This gives a range of -2048 to 2047 cents, which is about two octaves higher and lower from the center pitch. The timestep of each point in this array is 5 UTAU ticks, which means it is relative to the tempo of the render. To convert the index from the array to seconds, you can use this equation: $$\frac{60i}{96t}$$
 
@@ -78,7 +78,7 @@ resampler.exe infile.wav outfile.wav 120 100 GB60
 
  Here is an example of the pitchbend argument from an actual pitchbend: `AA#36#/C7t4f3t374X5C536y7x8u9l+S+z/F/H/E+9+y+l+W+G919l9X9K9B8684859B9O9f90+M+m+//X/t//ANAWAYAUAKAB`
 
- And here is an image to visualize part of the parsing of the pitchbend argument:
+ And here is an image to visualize the parsing of the pitchbend argument:
  
  ![Visualization of parsing the pitchbend argument](assets/pitchbend_parsing.png)
 
@@ -212,10 +212,10 @@ del "%output%.dat"
 The last few commands for `temp.bat` only includes the concatenation of `.whd` and `.dat` files, which are the wave file header data and the wave file data block correspondingly. The origins of this behavior (why `.whd` and `.dat` files are made) is yet to be investigated.
 
 ## Multithreaded rendering
- `temp.bat` and `tempn.bat` are created for this mode of rendering. This mode of rendering can only be accessed by shareware UTAU by enabling it in `Tools -> Option -> Rendering -> Multiple processes for rendering (use batch files)`
+ `temp.bat` and `tempn.bat` are created for this mode of rendering. This mode of rendering can only be accessed in shareware UTAU by enabling it in `Tools -> Option -> Rendering -> Multiple processes for rendering (use batch files)`
 
 ### tempn.bat
- These are multiple batch files filled with pure resampler calls and for displaying the progress bar in each terminal window instance. The amount of batch files that exists depend on how many processes are set for the option mentioned above. For some reason, this starts from `temp2.bat` and ends at `temp2+n.bat`, with n being the number of processes set.
+ These are multiple batch files filled with pure resampler calls and for displaying the progress bar in each terminal window instance. The amount of batch files that exists depend on how many processes are set for the option mentioned above. For some reason, this starts from `temp2.bat` and ends at `temp2+n-1.bat`, with n being the number of processes set.
 
  Here is an example of the general structure of the file generated:
 ```bat
@@ -230,4 +230,4 @@ rem ... the rest of the notes set for this instance
 ```
 
 ### temp.bat: multithreaded
- This batch file is filled with pure wavtool calls to concatenate every sample. Nothing else special is in this file.
+ This batch file is filled with pure wavtool calls to concatenate every rendered sample. Nothing else special is in this file.
