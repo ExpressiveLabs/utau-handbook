@@ -70,7 +70,7 @@ resampler.exe infile.wav outfile.wav 120 100 GB60
 
  The run length encoding comes as a regular number surrounded by the `#` character. The number inside is the amount of repeats that the value last saved in the array.
  
- The array of integers that you get in return is an offset from the center pitch in cents. This gives a range of -2048 to 2047 cents, which is about two octaves higher and lower from the center pitch. The timestep of each point in this array is 15 UTAU ticks, which means it is relative to the tempo of the render. To convert the index from the array to seconds, you can use this equation: $$\frac{60i}{96t}$$
+ The array of integers that you get in return is an offset from the center pitch in cents. This gives a range of -2048 to 2047 cents, which is about two octaves higher and lower from the center pitch. The timestep of each point in this array is 5 UTAU ticks, which means it is relative to the tempo of the render. To convert the index from the array to seconds, you can use this equation: $$\frac{60i}{96t}$$
 
  Where $t$ is the tempo and $i$ is the index.
 
