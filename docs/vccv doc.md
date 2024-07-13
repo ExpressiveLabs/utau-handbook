@@ -1,0 +1,40 @@
+- ## Kinds of aliases in VCCV 2015
+    - [-V]
+      - Meant for when a syllable starts with a vowel next to silence
+    - [V]
+      - Meant to extend vowels across notes
+    - [_V]
+      - Meant for when your missing a [CV] (mostly, in this case, for [ngV]) and to be used with the C_k system (See C_k system for more)
+    - [V-]
+      - Meant for when a syllable ends in a vowel next to silence    
+    - [-CV]
+      -  Meant for /CV/ pairs that are next to silences
+    - [CV]
+        - Meant for /CV/ pairs that are next to vowels or consonants from the last syllable
+    - [_CV]
+        - Meant to be combinde with onset [CC]s to form onset consonant clusters
+        - the only consonants are [r] [l] [y] and [w]
+    - Onset [-CC]
+        - Meant to be combinde with [_CV] to form onset consonant clusters that are next to silences
+    - Onset [CC]
+        - Meant to be combinde with [_CV] to form onset consonant clusters that are next to vowels or consonants from the last syllable
+    - Coda [CC]
+      - Falls under the C_k system
+      - Meant to be combinde with [VC-]s to form coda consonant clusters next to vowels (see C_k system for more) or consonants from the next syllable
+    - Coda [CC-]
+      -   Meant to be combinde with [VC-]s to form coda consonant clusters next to sillence, or to be used as a replacement for Coda [CC]s for softer consonants
+    - Coda [VCC]
+      - Falls under the C_k system
+      - Coda consonant clusters used next to vowels (see C_k system for more) or consonants from the next syllable
+    - Coda [VCC-]
+      - Coda consonant clusters used next to next to sillence, or to be used as a replacement for Coda [VCC]s for softer consonants
+    - [VC]
+        - Falls under the C_k system
+        - Meant to be used for singualar coda consonants next to other consonants or next to a vowel when the consonant doesn't fall on the same syllable (see VC_k system for more)
+    - [V C]
+        - Meant to transion from a vowel to a consonent that falls on the next syllable
+    - [VC-]
+        - Meant to transion from a vowel to a consonent that falls on the same syllable, to be put next to silence when a syllable ends in a consonent, or as a replacement for a [VC] for a softer consonant.
+    - [C C]
+        - Meant to be combinded with a [VC-] to functions like a [VC] but a specific consonant transtion instead of a [k] or [t].
+      
