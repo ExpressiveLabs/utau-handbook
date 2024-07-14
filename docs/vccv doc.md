@@ -38,3 +38,25 @@
     - [C C]
         - Meant to be combinded with a [VC-] to functions like a [VC] but a specific consonant transtion instead of a [k] or [t].
       
+- ## C_k System
+  - The C_k system refers to how VCCV 2015 uses [VC] and [CV]/[_V] for [VC.CV] or [VC.V] connections.
+  - When a syllable ends in a consonant and the next Syllable is just a vowel, using a pair [VC][_V] when reasult in the consonant sounding like it's comeing from the last syllable instead of the next one, where using [VC][CV] pair may make things sound like the consonant is coming from the next syllable. (See Consonant Syllable Placement for more)
+
+- ## Consonant Syllable Placement
+  - VCCV as a system cares deeply about where Consonants fall in syllables, it changes what type of allies is used depending on where they fall.
+    - Examples
+      - [p@s.p0rt] should be pharsed as [-p@][@s][p0][0r-][rt-] while [p@.sp0rt] should be [-p@][@ sp][sp0][0r-][rt-].
+      - [ku.myu.ni.ddE] should be [-ku][u m][my][_yo][o n][ni][i dd][ddE] while [kum.yu.ni.ddE] should be [-ku][um-][m y][yo][o n][ni][i dd][ddE].
+      - [vAr.E] should be [-vA][Ar-][rE] while [vA.rE] should be [-vA][A r][rE].
+  - In order for this to be intuetive for the user, it should be clear where consonants fall in syllables
+      - Examples
+          - SynthV
+
+            ![image](https://github.com/user-attachments/assets/8b0cc2f7-5954-413d-a70b-bc1b98109f80)
+            - Makes it very clear that the [s] and [p] fall on two different syllables
+        - OpenUTAU
+       
+          ![image](https://github.com/user-attachments/assets/c8a72639-9ce2-470b-9682-2a819e5e9646)
+            - It's very vague where the [s] and [p] fall
+    
+  
