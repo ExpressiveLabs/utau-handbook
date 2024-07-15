@@ -39,8 +39,8 @@
         - Meant to be combinded with a [VC-] to functions like a [VC] but a specific consonant transtion instead of a [k] or [t].
       
 - ## C_k System
-  - The C_k system refers to how VCCV 2015 uses [VC] and [CV]/[_V] for [VC.CV] or [VC.V] connections.
-  - When a syllable ends in a consonant and the next Syllable is just a vowel, using a pair [VC][_V] when reasult in the consonant sounding like it's comeing from the last syllable instead of the next one, where using [VC][CV] pair may make things sound like the consonant is coming from the next syllable. (See Consonant Syllable Placement for more)
+  - The C_k system refers to how VCCV 2015 uses C_k aliases and [CV]/[_V] for [C.CV] or [C.V] connections.
+  - When a syllable ends in a consonant and the next Syllable is just a vowel, using a C_k[_V] pair will reasult in the consonant sounding like it's comeing from the last syllable instead of the next one like how using a [V C][CV] pair may make things sound. (See Consonant Syllable Placement for more)
 
 - ## Consonant Syllable Placement
   - VCCV as a system cares deeply about where Consonants fall in syllables, it changes what type of allies is used depending on where they fall.
@@ -57,6 +57,6 @@
         - OpenUTAU
        
           ![image](https://github.com/user-attachments/assets/c8a72639-9ce2-470b-9682-2a819e5e9646)
-            - It's very vague where the [s] and [p] fall
+            - It's very vague where the [s] and [p] fall, which makes it unclear how this is being pharsed
     
   
