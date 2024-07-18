@@ -47,15 +47,15 @@ resampler.exe infile.wav outfile.wav 120 100 GB60
  | Argument | Description | Example |
  | :---: | --- | --- |
  | in_file | The path to the input wave file. | \path\to\input.wav |
- | out_file | The path to the output wave file. | \path\to\output.wav |
- | pitch | The center pitch of the note in musical notation. | C4 |
+ | out_file | The path to the output wave file. Is `nul` when `Initialize freq. map` is used. | \path\to\output.wav |
+ | pitch | The center pitch of the note in musical notation. Is `100` when `Initialize freq. map` is used. | C4 |
  | velocity | The consonant velocity of the note. | 100 |
- | *flags* | The flags for the note. `""` if there are no flags. | F1B0Y0H0 |
+ | *flags* | The flags for the note. `""` if there are no flags. Forward slashes (`/`) are added in some cases where two letters are next to each other. Is `GN` when `Initialize freq. map` is used. This assumes that `G` is the flag for regenerating the frequency map. | F1B0Y0H0 |
  | *offset* | The offset from the start of the sample in milliseconds. Everything before this point is cut off. Essentially the same as offset in the oto. | 1000 |
  | *length* | The length of the stretched area in milliseconds. | 1000 |
  | *consonant* | The point of the border of the stretched and unstretched area relative to the offset. The area before this point is generally unstretched unless consonant velocity is not 100, while the area after this point is stretched according to the length. Essentially the same as consonant in the oto. | 450 |
  | *cutoff* | The cutoff from either the end of the sample or relative from the offset. Everything after this point is cut off. Essentially the same as cutoff in the oto. | -700 |
- | *volume* | The volume of the render in percent read from the intensity note property | 100 |
+ | *volume* | The volume of the render in percent read from the intensity note property. | 100 |
  | *modulation* | The modulation of the render in percent read from the modulation note property. 100% modulation means the original pitch of the render shows through if the pitchbend is completely flat. | 0 |
  | *tempo* | The tempo of the note to help with pitchbend calculation. Always has a ! at the start. | !120 |
  | *pitchbend* | The pitchbend of the note. [More about it here.](#the-pitchbend-argument) | [Provided here.](#the-pitchbend-argument) |
