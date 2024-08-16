@@ -58,5 +58,11 @@
        
           ![image](https://github.com/user-attachments/assets/c8a72639-9ce2-470b-9682-2a819e5e9646)
             - It's very vague where the [s] and [p] fall, which makes it unclear how this is being pharsed
-    
+    - Where consonants should fall is determined by stress, more research is needed to understand how stress and consonant syllable placement interact.
+
+    -  ##  Timings
+      -  One of the core principles of VCCV is that it handles the timings of Phonemes for you.
+      -  The timing for everything is based on the next notes Pre-utterance.
+      -  VCCV relies on Consonant Velocity in order to make sure things sound natural when songs are sung quickly or when there's a lot of fast notes
+          - The nice thing about this is that it's extremely consistent, being able to be handled with some math.
   
