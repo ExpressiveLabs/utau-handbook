@@ -15,9 +15,9 @@
         - Meant to be combinde with onset [CC]s to form onset consonant clusters
         - the only consonants are [r] [l] [y] and [w]
     - Onset [-CC]
-        - Meant to be combinde with [_CV] to form onset consonant clusters that are next to silences
+        - Meant to be combinde with [_CV] (or [CV]s if a [_CV] isn't available) to form onset consonant clusters that are next to silences
     - Onset [CC]
-        - Meant to be combinde with [_CV] to form onset consonant clusters that are next to vowels or consonants from the last syllable
+        - Meant to be combinde with [_CV] (or [CV]s if a [_CV] isn't available) to form onset consonant clusters that are next to vowels or consonants from the last syllable
     - Coda [CC]
       - Falls under the C_k system
       - Meant to be combinde with [VC-]s to form coda consonant clusters next to vowels (see C_k system for more) or consonants from the next syllable
@@ -62,7 +62,16 @@
 
     -  ##  Timings
       -  One of the core principles of VCCV is that it handles the timings of Phonemes for you.
-      -  The timing for everything is based on the next notes Pre-utterance.
+      -  The timing for everything is based on the next notes Pre-utterance, except for [CV]s and [-CV]s.
       -  VCCV relies on Consonant Velocity in order to make sure things sound natural when songs are sung quickly or when there's a lot of fast notes
           - The nice thing about this is that it's extremely consistent, being able to be handled with some math.
+          -  There are three different math equations to know about with VCCV, one for BPM, notes faster then 480 and notes slower then 480
+              - The one for BPM is $$100 \left(\frac{\text{Song's BPM}}{120}\right) = \text{Default velocity}$$.
+                    This equation adjusts the length of the note's pre-utterance to be as if it was recorded at the BPM of the song
+              - The one for notes faster then 480 is "(100 - (100 * (note length / 480))) + Default velocity"
+              - The one for notes slower then 480 is "Default velocity - (-50 + (100 * (note length / 960)))"
+
+
+
+
   
