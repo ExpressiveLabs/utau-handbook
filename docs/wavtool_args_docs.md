@@ -23,9 +23,9 @@ Running the command having entered the arguments and renaming 'wavtool2' to 'wav
  | offset | The offset from the start of the sample in milliseconds. Everything before this point is cut off. Essentially the same as offset in the oto, although changeable by modifying the STP in Note Property. | 750 |
  | length | The length of the resampled output in milliseconds. | 1000 |
 
-Below is a table of envelope arguments. These are used by the wavtool to envelope resampled files. In a table thereof below, I, dermi1002 put **p** and **v** arguments together since they are "two sides of the same coin," for lack of better words. I like to think of **p** as the position in time and **v** as the volume.
+Below is a table of envelope arguments. These are used by the wavtool to envelope resampled files. In that, I, dermi1002 put **p** and **v** arguments together since they are "two sides of the same coin," for lack of better words. I like to think of **p** as the position in time and **v** as the volume.
 
-Here is the table of these arguments, sorted in the order by a note (italics means completely optional arguments, underlined means mandatory arguments):
+Here is the table of these arguments, sorted in the order set by UTAU (italics means completely optional arguments, underlined means mandatory arguments):
 
  | Argument | Description | Example |
  | :---: | --- | --- |
