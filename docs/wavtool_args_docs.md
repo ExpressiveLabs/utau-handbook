@@ -29,10 +29,10 @@ Here is the table of these arguments, sorted in the order set by UTAU (italics m
 
  | Argument | Description | Example |
  | :---: | --- | --- |
- | <ins>p1</ins>, v1 | The first envelope point. I, dermi1002, like to think of this as "Current Overlap Point 1." p = starting silence when p2p3 is used, p = end of current overlap when p1p4 is used | 0, 0 or 60, 100 |
- | <ins>p2</ins>, v2 | The second envelope point. I like to think of this as "Current Overlap Point 2." p = end of current overlap when p2p3 is used, unused when p1p4 is used | 60, 100 or 2, 100 |
-  | *p5, v5* | The third envelope point. I like to think of this as "Middle Point." Is unused by default | (blank), (blank) |
- | p3, v3 | The fourth envelope point. I like to think of this as "Next Overlap Point 1." p = start of next overlap when p2p3 is used, unused when p1p4 is used | 35, 100 |
- | p4, v4 | The fifth envelope point. I like to think of this as "Next Overlap Point 2." p = ending silence when p2p3 is used, p = start of next overlap when p1p4 is used | (blank), 0 or 60, 100 |
+ | <ins>p1</ins>, v1 | The first envelope point. I, dermi1002, like to think of this as "Current Overlap Point 1." Positive p values go forwards. p is set as the starting silence when p2p3 is used, set as the end of current overlap when p1p4 is used. | 0, 0 or 60, 100 |
+ | <ins>p2</ins>, v2 | The second envelope point. I like to think of this as "Current Overlap Point 2." Positive p values go forwards. p is set as the end of the current overlap when p2p3 is used, unused when p1p4 is used. | 60, 100 or 2, 100 |
+  | *p5, v5* | The third envelope point. I like to think of this as "Middle Point." Positive p values go forwards. Is unused by default | (blank), (blank) |
+ | p3, v3 | The fourth envelope point. I like to think of this as "Next Overlap Point 1." Positive p values go backwards. p is set as the start of the next overlap when p2p3 is used, unused when p1p4 is used. | 35, 100 |
+ | p4, v4 | The fifth envelope point. I like to think of this as "Next Overlap Point 2." Positive p values go backwards. p is set as the ending silence when p2p3 is used, set as the start of next overlap when p1p4 is used. | (blank), 0 or 60, 100 |
 
 The wavtool argument, **ovr**, is the only argument of which I, dermi1002, do not yet have any absolute information. However, according to wavtool4vcv and wavtool-yawu, it seems to be an abbreviation for overlap. This part will be updated if new information or observations arrive.
