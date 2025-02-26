@@ -14,7 +14,7 @@ This won't cover how it's done, but only what those arguments are since I don't 
 wavtool2 <outfile> <infile> offset length p1 p2 p3 v1 v2 v3 v4 ovr p4 p5 v5
 ```
 
-Running the command having entered the arguments and renaming 'wavtool2' to 'wavtool.exe' will output a `.dat` file and a `.whd` file using the name of the output file.
+Running the command having entered the arguments and renaming 'wavtool2' to 'wavtool.exe' will output a `.whd` file and a `.dat` file using the name of the output file. Combining data in both files in this order and naming it a `.wav` file will result in a fully working audio file.
 
 ## The actual arguments
   Here are a few tables describing each argument included in the result from above:
