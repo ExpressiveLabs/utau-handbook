@@ -32,7 +32,7 @@ flags:
     N : No formant filter
     G : (Re)Generate frequency list
     T : Export text frequency list
-    B : Bressiness parameter. B0..B100, default B50
+    B : Breathiness parameter. B0..B100, default B50
 ex :
 resampler.exe infile.wav outfile.wav 120 100 GB60
 ```
